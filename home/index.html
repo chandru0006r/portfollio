@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang=en dir=ltr>
+
+<head>
+  <meta charset=utf-8 />
+  <meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1" />
+  <meta name=description content="Professional product designer and frontend developer based in Lagos, Nigeria" />
+  <meta name=keywords content="HTML, CSS, JavaScript, Figma, Product Design, User interface, user experience" />
+  <meta name=author content="Oluwakemi Adeleke" />
+  <link rel="shortcut icon" type=image/svg href=../media/logo.svg />
+  <title>Chandru| Web developer and frontend developer</title>
+  <link href="main.css" rel="stylesheet">
+  <style>
+   
+body{
+  width: 100%;
+  overflow-x: hidden;
+}
+.contain {
+    z-index: -1;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Roboto', sans-serif;
+}
+
+@media only screen and (min-device-width: 200px) and (max-device-width: 800px) {
+    .contain{
+      display: flex;
+    flex-wrap: wrap; 
+    }
+}
+
+.contain .cardu {
+  position: relative;
+  width: 259px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 230px;
+  border-radius: 4px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.contain .cardu:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+}
+
+.contain .cardu:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.percent {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 50px #000;
+  background: #222;
+  z-index: 1000;
+}
+
+.percent .number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.percent .number h2 {
+  color: #777;
+  font-weight: 700;
+  font-size: 40px;
+  transition: 0.5s;
+}
+
+.cardu:hover .percent .number h2 {
+  color: #fff;
+  font-size: 60px;
+}
+
+.percent .number h2 span {
+  font-size: 24px;
+  color: #777;
+  transition: 0.5s;
+}
+
+.cardu:hover .percent .number h2 span {
+  color: #fff;
+}
+
+.text {
+  position: relative;
+  color: #777;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.cardu:hover .text {
+  color: #fff;
+}
+.cardu:hover{
+  background-color: #fff;
+}
+
+
+.svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  z-index: 1000;
+}
+
+.svg circle
+{
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #191919;
+  stroke-width: 10;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+}
+
+.svg circle:nth-child(2) {
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+}
+
+.cardu:nth-child(1) .svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 90) / 100);
+  stroke: #00ff43;
+}
+
+.cardu:nth-child(2) .svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 85) / 100);
+  stroke: #00a1ff;
+}
+
+.cardu:nth-child(3) .svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 60) / 100);
+  stroke: #ffff04;
+}
+
+.cardu:nth-child(4) .svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 40) / 100);
+  stroke: #8838b4;
+}
+
+.cardu:nth-child(5) .svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 70) / 100);
+  stroke: #ff04f7;
+}
+
+  </style>
+</head>
+
+<body data-spy=scroll data-target=.navbar data-offset=200>
+  <header class=header-section id=home>
+    <nav class="navbar navbar-expand-md px-0 main-nav sticky nav-index" data-sticky-wrap=true data-sticky-class=stuck>
+      <div class="container px-4"> <a class=navbar-brand href=#home> <img src=media/logo.png alt="" style="height:52px;width:58px;"/> </a> <button class="navbar-toggler open-nav" type=button aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
+          <div class=toggle-menu-wrapper>
+            <div class=toggle-menu>
+              <div class="line line1"></div>
+              <div class="line line2"></div>
+              <div class="line line3"></div>
+            </div>
+          </div>
+        </button>
+        <div class="collapse navbar-collapse" id=navbarSupportedContent>
+          <ul class="navbar-nav ml-md-auto">
+            <li class=nav-item> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; </li>
+            <li class=nav-item> <a class=nav-link href=#home>Home <span class=sr-only>(current)</span></a> </li>
+            <li class=nav-item> <a class=nav-link href=#about>About</a> </li>
+            <li class=nav-item> <a class=nav-link href=#services>Services</a> </li>
+            <li class=nav-item> <a class=nav-link href=#portfolio>Portfolio</a> </li>
+            <li class=nav-item> <a class="nav-link case-studies" href=#contact>Contact Me</a> </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class=container>
+      <div class=hero-wrapper>
+        <div class=hero-text-wrapper>
+          <p class=hi> Hi There <img src=media/emoji.svg alt="" /> I'm </p>
+          <h1>Chandru</h1>
+          <h3>Web + Frontend Developer <span style="font-size: 30px;">👨‍💻</span></h3>
+          <p class=info> I’m a professional Web developer with front end development skills based on new techs. </p> <a href=#contact> <span>Hire Me</span> </a>
+        </div>
+        <div class=hero-image-wrapper> <img src="../res.cloudinary.com/dejiabiola/image/upload/v1607804394/envato_2.0/kem-hero.png" alt=hero-image /> </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="about-section container" id=about>
+      <div class=image-div data-aos=fade-right style="user-select:none ;"> <img src=../res.cloudinary.com/kemkem-dev/image/upload/c_scale,h_489/v1601063614/portfolio/kemi_rbclwr.jpg alt="kemi adeleke profile picture" loading=lazy style="user-select:none;" /> </div>
+      <div class=about-text-div>
+        <div class="header about-header">
+          <div class=inner>
+            <div data-aos=fade-up> <span>Who I am</span> <span class=line></span> </div>
+            <h3 data-aos=fade-up>About Me</h3>
+          </div>
+        </div>
+        <div class=text>
+          <p data-aos=fade-up> I’m Chandru, a professional and talented <em>web developer</em> with front end development skills. I am passionate about leveraging my diverse backgrounds to decipher challenging problems and create delightful experiences. I honed my skills at web development, technical writing, editing and SEO analytics. </p>
+          <p data-aos=fade-up> I develop websites with HTML, CSS, JavaScript, PHP, Django and Bootstrap. I have top skills in using design softwares like VS code, Sublime, Pycharm and PhotoShop; with data management tools like SQLite and PHPmyadmin. </p>
+          <p data-aos=fade-up> Being a diligent, hardworking and result oriented developer, I always work towards achieving best result on each project I lay my hands on. You can see my resume here</p>
+        </div><a href="https://www.freelancer.com/u/chandru0006r" data-aos=fade-up><span>Download CV</span></a>
+      </div>
+    </section>
+    <section class="services-section container" id=services>
+      <div class="header services-header">
+        <div class=inner>
+          <div data-aos=fade-up> <span>What I do</span> <span class=line></span></div>
+          <h3 data-aos=fade-up>My Services</h3>
+        </div>
+      </div>
+      <div class=services-card-wrapper>
+        <div class="services-card interface" data-aos=fade-up data-aos-delay=200>
+          <div> <img src=media/react-logo.svg alt="" /> </div>
+          <h5>Product Design</h5>
+          <p> I work with certain design tools to create high-fidelity designs and prototypes. I design accessible and usable products which aid business growth. </p>
+        </div>
+        <div class="services-card development" data-aos=fade-up data-aos-delay=400>
+          <div> <img src=media/brackets.svg alt="" /> </div>
+          <h5>Website Development</h5>
+          <p> I use various web technologies to develop attractive websites which converts visitors to customers. I develop creative and responsive website layouts. </p>
+        </div>
+        <div class="services-card marketing" data-aos=fade-up data-aos-delay=600>
+          <div> <img src=media/digital-marketing.svg alt="" /> </div>
+          <h5>Digital Marketing</h5>
+          <p> I identify and evaluates new digital technologies and use web analytics tools to measure site traffic to better optimize marketing campaigns. </p>
+        </div>
+      </div>
+    </section>
+    <section class="workflow-section container">
+      <div class="header workflow-header">
+        <div class=inner>
+          <div data-aos=fade-up> <span>Work Flow</span> <span class=line></span> </div>
+          <h3 data-aos=fade-up>My Work Process</h3>
+        </div>
+      </div>
+      <div class=cards-wrapper>
+        <div class="card idea" data-aos=zoom-in data-aos-delay=200> <img src=media/work-idea.svg alt="" />
+          <h6>Discover</h6>
+          <p>I conduct user research to identify the problem I want to solve.</p>
+        </div>
+        <div class="card plan" data-aos=zoom-in data-aos-delay=400> <img src=media/work-plan.svg alt="" />
+          <h6>Define</h6>
+          <p>I brainstorm possible design solutions to the identified problem.</p>
+        </div>
+        <div class="card sketch" data-aos=zoom-in data-aos-delay=600> <img src=media/work-sketch.svg alt="" />
+          <h6>Ideate</h6>
+          <p>I create wireframes and sketches of the product I’m about to design.</p>
+        </div>
+        <div class="card design" data-aos=zoom-in data-aos-delay=800> <img src=media/work-design.svg alt="" />
+          <h6>Prototype</h6>
+          <p>I create high fidelity design and prototype the screens.</p>
+        </div>
+        <div class="card design" data-aos=zoom-in data-aos-delay=1000> <img src=media/implement.svg alt="" />
+          <h6>Implement</h6>
+          <p>After designing, I deliver for implementation.</p>
+        </div>
+      </div><br><br><br>
+      <div class="header workflow-header" style="padding-top:5%;">
+        <div class=inner>
+          <div data-aos=fade-up> <span>Languages</span> <span class=line></span> </div>
+          <h3 data-aos=fade-up style="padding-bottom:0px;">My Tools</h3>
+        </div>
+      </div>
+      <div class="contain">
+    <div class="cardu" data-aos=fade-up>
+      <div class="box">
+        <div class="percent">
+          <svg class="svg">
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70"></circle>
+          </svg>
+          <div class="number">
+            <h2>90<span>%</span></h2>
+          </div>
+        </div>
+        <h2 class="text">Html</h2>
+      </div>
+    </div>
+    <div class="cardu" data-aos=fade-up>
+      <div class="box">
+        <div class="percent">
+          <svg class="svg">
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70"></circle>
+          </svg>
+          <div class="number">
+            <h2>85<span>%</span></h2>
+          </div>
+        </div>
+        <h2 class="text">CSS</h2>
+      </div>
+    </div>
+    <div class="cardu" data-aos=fade-up>
+      <div class="box">
+        <div class="percent">
+          <svg class="svg">
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70"></circle>
+          </svg>
+          <div class="number">
+            <h2>60<span>%</span></h2>
+          </div>
+        </div>
+        <h2 class="text">Javascript</h2>
+      </div>
+    </div>
+    <div class="cardu" data-aos=fade-up>
+        <div class="box">
+          <div class="percent">
+            <svg class="svg">
+              <circle cx="70" cy="70" r="70"></circle>
+              <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="number">
+              <h2>40<span>%</span></h2>
+            </div>
+          </div>
+          <h2 class="text">PHP</h2>
+        </div>
+      </div>
+      <div class="cardu" data-aos=fade-up>
+        <div class="box">
+          <div class="percent">
+            <svg class="svg">
+              <circle cx="70" cy="70" r="70"></circle>
+              <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="number">
+              <h2>70<span>%</span></h2>
+            </div>
+          </div>
+          <h2 class="text">Bootstrap</h2>
+        </div>
+      </div>
+  </div>
+    </section>
+    <section class="portfolio-section container" id=portfolio>
+      <div class="header portfolio-header">
+        <div class=inner>
+          <div data-aos=fade-up> <span>My Project</span> <span class=line></span> </div>
+          <h3 data-aos=fade-up>My Portfolio</h3>
+        </div>
+      </div>
+      <div class=flex-container data-aos=fade>
+        <div class="profile-container port-container-1">
+          <div class=profile-wrapper>
+            <div class=profile-card>
+              <h4>Tadio Mobile App</h4>
+              <p>A cryptocurrency mobile app which allows users buy and sell bitcoins, Etherum, Coinbase and Gift cards. Users can also recharge their mobile numbers from the app directly. </p> <a href=https://www.behance.net/gallery/104144345/Crypto-App>View Design</a>
+            </div>
+          </div>
+        </div>
+        <div class="profile-container port-container-2">
+          <div class=profile-wrapper>
+            <div class=profile-card>
+              <h4>ITB Agency Website</h4>
+              <p> ITB media agency is a company into corporate communications and business development. The website was designed to increase the company’s conversion rate of customers. </p> <a href=https://www.behance.net/gallery/103542267/Media-Agency-website>View Design</a>
+            </div>
+          </div>
+        </div>
+        <div class="profile-container port-container-3">
+          <div class=profile-wrapper>
+            <div class=profile-card>
+              <h4>DesignPal Mobile App</h4>
+              <p> DesignPal is an AR mobile app which assists users to scan their new apartment and suggest various interior decorations and styles suitable for that particular apartment. </p> <a href=https://www.behance.net/gallery/103838241/Interior-Design-App>View Design</a>
+            </div>
+          </div>
+        </div>
+        <div class="profile-container port-container-4">
+          <div class=profile-wrapper>
+            <div class=profile-card>
+              <h4>Afigo Website</h4>
+              <p> Afigo website is a platform that shows tourists great places in Nigeria. The website was designed with quite a number of features that serves its purpose as a travel agency. </p> <a href=https://www.behance.net/gallery/103838821/Travel-Website>View Design</a>
+            </div>
+          </div>
+        </div>
+        <div class="profile-container port-container-5">
+          <div class=profile-wrapper>
+            <div class=profile-card>
+              <h4>Pixelshub Mobile App</h4>
+              <p> PixelsHub is a mobile app which connects professional photographers and creative artists to their potential clients globally. </p> <a href=https://www.behance.net/gallery/104417865/Photographers-Platform>View Profile</a>
+            </div>
+          </div>
+        </div>
+        <div class="profile-container port-container-6">
+          <div class=profile-wrapper>
+            <div class=profile-card>
+              <h4>Tuteria Website</h4>
+              <p> Tuteria Limited is a company which offers both onine and offline tutoring services to people. The landing page was designed to increase customer’s conversion rate and improve usability. </p> <a href=https://www.behance.net/gallery/104473567/School-Landing-Page>View Profile</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact-section container" id=contact>
+      <div class="header contact-header">
+        <div class=inner>
+          <div data-aos=fade-up> <span>Contact Me</span> <span class=line></span> </div>
+          <h3 data-aos=fade-up>Get In Touch</h3>
+        </div>
+      </div>
+      <div class=contact-header-text data-aos=fade-up>
+        <p>I am available to work on your projects and bring your ideas to life. I am just a click away.</p>
+      </div>
+      <div class=contact-flex>
+        <div class=left-icons>
+          <div class=contact-info data-aos=fade-up>
+            <div class=contact-image-div> <img src=media/contact-address.svg alt="" /> </div>
+            <p>Chennai, India</p>
+          </div>
+          <div class=contact-info data-aos=fade-up>
+            <div class=contact-image-div> <img src=media/contact-email.svg alt="" /> </div> <a href=mailto:charanchandru587@gmail.com>charanchandru587@gmail.com</a>
+          </div>
+          <div class=contact-info data-aos=fade-up>
+            <div class=contact-image-div> <img src=media/contact-phone.svg alt="" /> </div> <a href=tel:+234-813-640-4552>+91 6381098351</a>
+          </div>
+        </div>
+        <form class='contact-form' data-aos='fade-up' method='POST'>
+          <input type='hidden' name='form-name' value='contact' />
+          <p class=hidden style=visibility:hidden;height:0> 
+            <label>Don’t fill this out if you're human: <input name=bot-field /></label>
+           </p>
+           <input type=text placeholder="Full Name" class="username" name=name required />
+          <div> 
+            <input type=email placeholder=Email name=email required class="email" /> 
+            <input type=number placeholder="Phone Number" class="num" name=phone-number required /> 
+          </div>
+           <textarea name=message id="" cols=30 rows=10 placeholder="Enter your message"  class="message" required></textarea> 
+           <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" class="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class=container>
+      <div><img src=media/logo.png alt="" style="height:52px;width:58px;"/></div>
+      <div>
+        <p>&copy; Copyright 2021. All right reserved</p>
+      </div>
+      <div> <a href="https://www.facebook.com/profile.php?id=100028528181777" target=_blank> <img src=media/facebook.svg alt="link to twitter account" style="height: 30px;"/> </a> <a href="https://www.linkedin.com/in/chandru-v-02809822b/" target=_blank> <img src=media/linkedin.svg alt="link to linkedin account" /> </a> <a href="https://www.instagram.com/chandru0006r/" target=_blank> <img src="./media/instagram.svg" alt="link to behance account" style="height: 30px;"/> </a> <a href="https://api.whatsapp.com/send?phone=6381098351&text=Hey%20this%20is%20Kemi.%20I'm%20looking%20forward%20to%20discussing%20with%20you%20about%20bringing%20your%20ideas%20to%20life." target=_blank><img src=media/whatsapp.svg alt="link to whatsapp" /></a></div>
+    </div>
+  </footer>
+  <div class=page-designs>
+    <div class=grills> <img src=media/side-element.svg alt="" class=element-1 /> <img src=media/side-element.svg alt="" class=element-2 /> <img src=media/side-element.svg alt="" class=element-3 /> <img src=media/side-element.svg alt="" class=element-4 /> </div>
+    <div class=page-overlay>
+      <div class="layer layer-1"></div>
+      <div class="layer layer-2"></div>
+      <div class="layer layer-3"></div>
+    </div>
+    <div class=random-moving-divs>
+      <div class=a></div>
+      <div class=b></div>
+      <div class=c></div>
+      <div class=e></div>
+      <div class=f></div>
+      <div class=g></div>
+      <div class=i></div>
+      <div class=j></div>
+      <div class=k></div>
+    </div>
+  </div>
+  <div class=mobile-nav>
+    <div class=container>
+      <nav class=nav-bar>
+        <ul class="navbar-nav ml-md-auto">
+          <li class="nav-list-item mobile-link"> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; </li>
+          <li class="nav-list-item mobile-link"> <a class=nav-link href=#home>Home <span class=sr-only>(current)</span></a> </li>
+          <li class="nav-list-item mobile-link"> <a class=nav-link href=#about>About</a> </li>
+          <li class="nav-list-item mobile-link"> <a class=nav-link href=#services>Services</a> </li>
+          <li class="nav-list-item mobile-link"> <a class=nav-link href=#portfolio>Portfolio</a> </li>
+          <li class="nav-list-item mobile-link"> <a class="nav-link case-studies" href=#contact>Contact Me</a> </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/easypiechart.min.js></script>
+  <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/charanchandru587@gmail.com"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init("xHDaki_26uPG6VRdS");
+     })();
+
+
+    function validate() {
+      let name = document.querySelector(".username");
+      let email = document.querySelector(".email");
+      let msg = document.querySelector(".message");
+      let num = document.querySelector(".num");
+      let btn = document.querySelector(".submit");
+
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (name.value == "" || email.value == "" || msg.value == "" || num.value == "") {
+          emptyerror();
+        } else {
+          sendmail(name.value, email.value, msg.value, num.value);
+          success();
+        }
+      });
+    }
+    validate();
+
+    function sendmail(name, email, msg, num) {
+      emailjs.send("service_khff4jj","template_nfolr06", {
+        to_name: name,
+        from_name: email,
+        from_phone: num,
+        message: msg
+      });
+    }
+
+    function emptyerror() {
+             swal({
+        title: "Opps.!",
+        text: "You didn't filled the form yet !",
+        icon: "error",
+        button: "OK",
+      });
+    }
+
+    function error() {
+      swal({
+        title: "Opps.!",
+        text: "Message didn't sent,please try again !",
+        icon: "error",
+        button: "OK",
+      });
+    }
+
+    function success() {
+      swal({
+        title: "Good job!",
+        text: "You clicked the button!",
+        icon: "success",
+        button: "Aww yiss!",
+      });
+    }
+  </script>
+</body>
+
+</html>
