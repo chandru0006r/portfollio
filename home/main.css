@@ -10240,7 +10240,7 @@ footer > div > div:nth-of-type(3) {
 	}
 }
 .services-section {
-	margin-bottom: 20rem;
+	margin-bottom: 5rem;
 }
 @media (max-width: 600px) {
 	.services-section {
@@ -10268,13 +10268,23 @@ footer > div > div:nth-of-type(3) {
 	margin-right: 1rem;
 	margin-left: 1rem;
 }
-.services-card:hover {
-	background: #0fb;
-}
-.services-card:hover h5,
-.services-card:hover p {
-	color: #303030;
-}
+/* .services-card:hover{
+	
+} */
+
+.sc-1:hover {
+	box-shadow: rgba(0, 0, 0, 0.36) 0px 3px 6px, rgba(0, 0, 0, 0.53) 0px 3px 6px, rgba(0, 174, 255, 0.8) 0px 2px 8px 0px;
+  }
+  
+  .sc-2:hover {
+	box-shadow: rgba(0, 0, 0, 0.36) 0px 3px 6px, rgba(0, 0, 0, 0.53) 0px 3px 6px, rgba(224, 31, 113, 0.8) 0px 2px 8px 0px;
+  }
+  
+  .sc-3:hover {
+	box-shadow: rgba(0, 0, 0, 0.36) 0px 3px 6px, rgba(0, 0, 0, 0.53) 0px 3px 6px, rgba(136, 56, 180, 0.8) 0px 2px 8px 0px;
+  }
+  
+
 @media (max-width: 500px) {
 	.services-card {
 		padding: 1.6rem 1.3rem 2rem 2.1rem;
@@ -10330,6 +10340,7 @@ footer > div > div:nth-of-type(3) {
 	font-family: SF Pro Display, sans-serif;
 	font-style: normal;
 	color: #fff;
+	transition: color 0.3s ease;
 }
 .services-card p {
 	font-weight: 400;
@@ -10922,7 +10933,7 @@ footer > div > div:nth-of-type(3) {
 	}
 }
 .about-section .about-text-div {
-	max-width: 35.5rem;
+	max-width: 55.5rem;
 	overflow: hidden;
 }
 @media (max-width: 965px) {
