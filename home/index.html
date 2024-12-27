@@ -7,6 +7,9 @@
   <meta name=description content="Professional product designer and frontend developer based in Lagos, Nigeria" />
   <meta name=keywords content="HTML, CSS, JavaScript, Figma, Product Design, User interface, user experience" />
   <meta name=author content="Oluwakemi Adeleke" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+<script type="module" src="https://early.webawesome.com/webawesome@3.0.0-alpha.4/dist/webawesome.loader.js"></script>
+<link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-alpha.4/dist/themes/default.css">
   <link rel="shortcut icon" type=image/svg href=../media/logo.svg />
   <title>Chandru| Web developer and frontend developer</title>
   <link href="main.css" rel="stylesheet">
@@ -112,7 +115,6 @@ body{
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 1px;
-  text-transform: uppercase;
   transition: 0.5s;
 }
 
@@ -172,6 +174,186 @@ body{
   stroke: #ff04f7;
 }
 
+.skill-container {
+  display: flex;
+  align-items: flex-start; /* Vertically centers the items */
+  justify-content: center; /* Horizontally centers the items */
+  padding: 120px;
+  padding-top: 100px;
+}
+.skill-text-section {
+  width: 100%; /* Adjust the width as needed */
+  margin-right: 100px;
+  margin-left:100px;
+  padding: 20px;
+}
+
+.skill-text-section h2 {
+  margin-bottom: 15px;
+  font-family: SF Pro Display, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 13rem;
+  line-height: 9rem;
+  color: #fff;
+  margin-top: 11.6rem;
+}
+
+.skill-section {
+  width: 70%; /* Adjust the width to balance layout */
+  display: flex;
+  justify-content: right;
+  padding-left: 75px;
+}
+
+.skill-wall {
+  display: flex;
+}
+.skill-v-boxes {
+  display: flex;
+  flex-direction: column;
+  &:not(:first-child){
+    margin-left: -75px;
+  }
+}
+.skill-second {
+  margin-top: 75px;
+}
+.skill-third {
+  margin-top: 150px;
+}
+.skill-forth {
+  margin-top: 225px;
+}
+.skill-box {
+  width: 100px;
+  height: 100px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin: 25px;
+  cursor: pointer;
+  &:hover{
+   &:not(.skill-link) > .skill-box-face, > .skill-box-back {
+     transform: translateZ(100px) rotateX(180deg);
+     background-color: transparent!important;
+    }
+    &:not(.skill-link) > .skill-box-face > .skill-box-text {
+      opacity: 0;
+    }
+    & .skill-tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+    &.skill-link > .skill-box-face {
+      background-color: transparent!important;
+      & > .skill-box-text {
+        color: #323232;
+      }
+    }
+  }
+  
+  &.skill-link {
+    & > .skill-box-face {
+      background-color: #00ffbb;
+      border: 1px solid #323232;
+      box-sizing: border-box;
+      transition: background-color .5s;
+    }
+    & .skill-box-text {
+      color: #efefef;
+      transition: color .5s;
+    }
+  }
+}
+
+.skill-box-face, .skill-box-back {
+  position: absolute;
+  top:0;
+  z-index:1;
+  width: 100px;
+  height: 100px;
+  background-color: #212121;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+  transform-style: preserver-3d;
+  -webkit-transform-style: preserver-3d;
+  -moz-transform-style: preserver-3d;
+  transition: transform 1s, background-color 0s .3s;
+}
+
+.skill-box-face .skill-box-text {
+  line-height: 100px;
+  text-align: center;
+  font-size: 40px;
+  color: #bababa;
+  -webkit-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  transition: opacity 0s linear .3s;
+}
+
+.skill-box-back .skill-box-text {
+  line-height: 100px;
+  text-align: center;
+  font-size: 12px;
+  color: #636363;
+  -webkit-transform: rotate(-135deg);
+  -ms-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  transform: rotate(-135deg) rotateY(180deg);
+  transition: opacity 0s linear .3s;
+}
+
+.skill-box-back {
+  z-index:0;
+  background-image: linear-gradient( #ffffff, #ffffff);
+}
+
+.skill-box-text img {
+  max-width: 32px;
+  max-height: 32px;
+  opacity: 1;
+}
+
+.skill-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 10px;
+  left: 35px;
+  width: 80px;
+  font-size: 13px;
+  color: #000;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,.8);
+  padding: 5px 0;
+  z-index: 1000;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  transition: visibility 0s linear .3s, opacity 1s linear .3s;
+}
+
+.skill-tooltip:after {
+  position: absolute;
+  top: -5px;
+  left: 35px;
+  content:' ';
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid black;
+}
+
+
+
   </style>
 </head>
 
@@ -222,37 +404,208 @@ body{
           </div>
         </div>
         <div class=text>
-          <p data-aos=fade-up> I’m Chandru, a professional and talented <em>web developer</em> with front end development skills. I am passionate about leveraging my diverse backgrounds to decipher challenging problems and create delightful experiences. I honed my skills at web development, technical writing, editing and SEO analytics. </p>
+          <p data-aos=fade-up> Hello, I'm Chandru, a passionate student at <span style="color: #0fb;">Saveetha Engineering College</span>, specializing in Web Development and UI/UX Design within the field of <span style="color: #0fb;">Computer Science</span>. My primary focus is crafting captivating web experiences and user interfaces. I've participated in various competitions and workshops to enhance my skills.</p>
           <p data-aos=fade-up> I develop websites with HTML, CSS, JavaScript, PHP, Django and Bootstrap. I have top skills in using design softwares like VS code, Sublime, Pycharm and PhotoShop; with data management tools like SQLite and PHPmyadmin. </p>
-          <p data-aos=fade-up> Being a diligent, hardworking and result oriented developer, I always work towards achieving best result on each project I lay my hands on. You can see my resume here</p>
+          <p data-aos=fade-up> Being a diligent, hardworking and result oriented developer, I always work towards achieving best result on each project I lay my hands on. <br><br>You can see my resume here</p>
         </div><a href="https://www.freelancer.com/u/chandru0006r" data-aos=fade-up><span>Download CV</span></a>
       </div>
     </section>
     <section class="services-section container" id=services>
       <div class="header services-header">
         <div class=inner>
-          <div data-aos=fade-up> <span>What I do</span> <span class=line></span></div>
-          <h3 data-aos=fade-up>My Services</h3>
+          <div data-aos=fade-up> <span>What I did</span> <span class=line></span></div>
+          <h3 data-aos=fade-up>My Experiences</h3>
         </div>
       </div>
+      
       <div class=services-card-wrapper>
-        <div class="services-card interface" data-aos=fade-up data-aos-delay=200>
+        <div class="services-card sc-1 interface" data-aos=fade-up data-aos-delay=200>
           <div> <img src=media/react-logo.svg alt="" /> </div>
-          <h5>Product Design</h5>
-          <p> I work with certain design tools to create high-fidelity designs and prototypes. I design accessible and usable products which aid business growth. </p>
+          <h5>Freelancer | <span style="color: rgb(0, 174, 255);">2022-Active</span></h5>
+          <p> Freelance web developer and designer, creating impactful websites for clients and fellow students. Dedicated to delivering innovative, user-centered designs for every project. </p>
         </div>
-        <div class="services-card development" data-aos=fade-up data-aos-delay=400>
+        <div class="services-card sc-2 development" data-aos=fade-up data-aos-delay=400>
           <div> <img src=media/brackets.svg alt="" /> </div>
-          <h5>Website Development</h5>
-          <p> I use various web technologies to develop attractive websites which converts visitors to customers. I develop creative and responsive website layouts. </p>
+          <h5>Data Analyst | <span style="color: rgb(227, 31, 113);">2024</span></h5>
+          <p> Completed my internship at Frick India Ltd. as a Data Analyst, working on data-driven projects and enhancing analytical skills. Eager to collaborate with talented teams and gain more industry experience. </p>
         </div>
-        <div class="services-card marketing" data-aos=fade-up data-aos-delay=600>
+        <div class="services-card sc-3 marketing" data-aos=fade-up data-aos-delay=600>
           <div> <img src=media/digital-marketing.svg alt="" /> </div>
-          <h5>Digital Marketing</h5>
-          <p> I identify and evaluates new digital technologies and use web analytics tools to measure site traffic to better optimize marketing campaigns. </p>
+          <h5>Personal Tutor | <span style="color: rgb(136, 56, 180);">2022-Active</span></h5>
+          <p> As a dedicated tutor, I provide personalized education to school students in a comfortable home setting. My focus is on helping them excel academically, build strong foundations, and develop effective study habits.</p>
         </div>
       </div>
     </section>
+
+
+    <section class="skill-container">
+      <div class="skill-text-section">
+        <div class="header workflow-header" style="align-items: baseline;padding-left: 10px;">
+          <div class=inner>
+            <div data-aos=fade-up> <span>My Tools</span> <span class=line></span> </div>
+            <h3 data-aos=fade-up style="padding-bottom:0px;">Languages</h3><br><br>
+          </div>
+        </div>
+  <h2><span style="color: #0fb;">SKILLS</span> ARE FREEDOM.</h2>
+</div>
+
+<section class="skill-section">
+<div class="skill-wall">
+  <div class="skill-v-boxes">
+    <div class="skill-box">
+      <span class="skill-tooltip">CSS</span>
+      <div class="skill-box-face">
+        <div class="skill-box-text"><img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="" srcset=""></div>
+      </div>
+      <div class="skill-box-back">
+        <div class="skill-box-text">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+      </div>
+    </div>
+    <div class="skill-box">
+      <span class="skill-tooltip">JavaScript</span>
+      <div class="skill-box-face">
+        <div class="skill-box-text"><img src="https://i.pinimg.com/originals/13/40/7c/13407c12f50f08d328800c3caef43f61.png" alt="" srcset=""></div>
+      </div>
+      <div class="skill-box-back">
+        <div class="skill-box-text">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>        
+    </div>
+    <div class="skill-box">
+      <span class="skill-tooltip">C</span>
+      <div class="skill-box-face">
+        <div class="skill-box-text">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="">
+        </div>
+      </div>
+      <div class="skill-box-back">
+        <div class="skill-box-text">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+      </div>
+    </div>
+    <div class="skill-box">
+      <span class="skill-tooltip">Vue</span>
+      <div class="skill-box-face">
+        <div class="skill-box-text"><i class="fab fa-vuejs"></i></div>
+      </div>
+      <div class="skill-box-back">
+        <div class="skill-box-text">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="skill-v-boxes skill-second">
+    <div class="skill-box">
+      <span class="skill-tooltip">HTML</span>
+      <div class="skill-box-face">
+        <div class="skill-box-text"><img src="https://cdn.iconscout.com/icon/free/png-256/free-html-5-logo-icon-download-in-svg-png-gif-file-formats--programming-langugae-language-pack-logos-icons-1175208.png" alt=""></div>
+      </div>
+      <div class="skill-box-back">
+        <div class="skill-box-text">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+    </div>
+    <div class="skill-box">
+      <span class="skill-tooltip">Python</span>
+      <div class="skill-box-face">
+        <div class="skill-box-text"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt=""></div>
+      </div>
+      <div class="skill-box-back">
+        <div class="skill-box-text">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+      </div>
+    </div>
+    <div class="skill-box">
+      <span class="skill-tooltip">Django</span>
+      <div class="skill-box-face">
+        <div class="skill-box-text"><img src="https://www.svgrepo.com/show/353657/django-icon.svg" alt=""></i></div>
+      </div>
+      <div class="skill-box-back">
+        <div class="skill-box-text">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="skill-v-boxes skill-third">
+    <div class="skill-box">
+      <span class="skill-tooltip">React</span>
+      <div class="skill-box-face">
+        <div class="skill-box-text">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1150px-React-icon.svg.png" alt="">
+        </div>
+      </div>
+      <div class="skill-box-back">
+        <div class="skill-box-text">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+    </div>
+    <div class="skill-box">
+      <span class="skill-tooltip">Java</span>
+      <div class="skill-box-face">
+        <div class="skill-box-text"><img src="https://i.pinimg.com/originals/79/5e/bb/795ebb5f4a470cd7242136237f61fc53.png" alt=""></div>
+      </div>
+      <div class="skill-box-back">
+        <div class="skill-box-text">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="skill-v-boxes skill-forth">
+    <div class="skill-box skill-link">
+      <div class="skill-box-face">
+        <div class="skill-box-text"><i class="fab fa-github-alt"></i></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+</section>
     <section class="workflow-section container">
       <div class="header workflow-header">
         <div class=inner>
@@ -282,85 +635,10 @@ body{
           <p>After designing, I deliver for implementation.</p>
         </div>
       </div><br><br><br>
-      <div class="header workflow-header" style="padding-top:5%;">
-        <div class=inner>
-          <div data-aos=fade-up> <span>Languages</span> <span class=line></span> </div>
-          <h3 data-aos=fade-up style="padding-bottom:0px;">My Tools</h3>
-        </div>
-      </div>
-      <div class="contain">
-    <div class="cardu" data-aos=fade-up>
-      <div class="box">
-        <div class="percent">
-          <svg class="svg">
-            <circle cx="70" cy="70" r="70"></circle>
-            <circle cx="70" cy="70" r="70"></circle>
-          </svg>
-          <div class="number">
-            <h2>90<span>%</span></h2>
-          </div>
-        </div>
-        <h2 class="text">Html</h2>
-      </div>
-    </div>
-    <div class="cardu" data-aos=fade-up>
-      <div class="box">
-        <div class="percent">
-          <svg class="svg">
-            <circle cx="70" cy="70" r="70"></circle>
-            <circle cx="70" cy="70" r="70"></circle>
-          </svg>
-          <div class="number">
-            <h2>85<span>%</span></h2>
-          </div>
-        </div>
-        <h2 class="text">CSS</h2>
-      </div>
-    </div>
-    <div class="cardu" data-aos=fade-up>
-      <div class="box">
-        <div class="percent">
-          <svg class="svg">
-            <circle cx="70" cy="70" r="70"></circle>
-            <circle cx="70" cy="70" r="70"></circle>
-          </svg>
-          <div class="number">
-            <h2>60<span>%</span></h2>
-          </div>
-        </div>
-        <h2 class="text">Javascript</h2>
-      </div>
-    </div>
-    <div class="cardu" data-aos=fade-up>
-        <div class="box">
-          <div class="percent">
-            <svg class="svg">
-              <circle cx="70" cy="70" r="70"></circle>
-              <circle cx="70" cy="70" r="70"></circle>
-            </svg>
-            <div class="number">
-              <h2>40<span>%</span></h2>
-            </div>
-          </div>
-          <h2 class="text">PHP</h2>
-        </div>
-      </div>
-      <div class="cardu" data-aos=fade-up>
-        <div class="box">
-          <div class="percent">
-            <svg class="svg">
-              <circle cx="70" cy="70" r="70"></circle>
-              <circle cx="70" cy="70" r="70"></circle>
-            </svg>
-            <div class="number">
-              <h2>70<span>%</span></h2>
-            </div>
-          </div>
-          <h2 class="text">Bootstrap</h2>
-        </div>
-      </div>
-  </div>
+      
     </section>
+
+
     <section class="portfolio-section container" id=portfolio>
       <div class="header portfolio-header">
         <div class=inner>
@@ -439,7 +717,7 @@ body{
             <div class=contact-image-div> <img src=media/contact-email.svg alt="" /> </div> <a href=mailto:charanchandru587@gmail.com>charanchandru587@gmail.com</a>
           </div>
           <div class=contact-info data-aos=fade-up>
-            <div class=contact-image-div> <img src=media/contact-phone.svg alt="" /> </div> <a href=tel:+234-813-640-4552>+91 6381098351</a>
+            <div class=contact-image-div> <img src=media/contact-phone.svg alt="" /> </div> <a href=tel:+234-813-640-4552>+91 6381098531</a>
           </div>
         </div>
         <form class='contact-form' data-aos='fade-up' method='POST'>
@@ -464,7 +742,7 @@ body{
       <div>
         <p>&copy; Copyright 2021. All right reserved</p>
       </div>
-      <div> <a href="https://www.facebook.com/profile.php?id=100028528181777" target=_blank> <img src=media/facebook.svg alt="link to twitter account" style="height: 30px;"/> </a> <a href="https://www.linkedin.com/in/chandru-v-02809822b/" target=_blank> <img src=media/linkedin.svg alt="link to linkedin account" /> </a> <a href="https://www.instagram.com/chandru0006r/" target=_blank> <img src="./media/instagram.svg" alt="link to behance account" style="height: 30px;"/> </a> <a href="https://api.whatsapp.com/send?phone=6381098351&text=Hey%20this%20is%20Kemi.%20I'm%20looking%20forward%20to%20discussing%20with%20you%20about%20bringing%20your%20ideas%20to%20life." target=_blank><img src=media/whatsapp.svg alt="link to whatsapp" /></a></div>
+      <div> <a href="https://www.facebook.com/profile.php?id=100028528181777" target=_blank> <img src=media/facebook.svg alt="link to twitter account" style="height: 30px;"/> </a> <a href="https://www.linkedin.com/in/chandru-v-02809822b/" target=_blank> <img src=media/linkedin.svg alt="link to linkedin account" /> </a> <a href="https://www.instagram.com/chandru0006r/" target=_blank> <img src="./media/instagram.svg" alt="link to behance account" style="height: 30px;"/> </a> <a href="https://api.whatsapp.com/send?phone=6381098531&text=Hey" target=_blank><img src=media/whatsapp.svg alt="link to whatsapp" /></a></div>
     </div>
   </footer>
   <div class=page-designs>
@@ -505,6 +783,24 @@ body{
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/charanchandru587@gmail.com"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const timelineLine = document.querySelector(".timeline-line");
+      const timelineImage = document.querySelector(".timeline-image");
+    
+      const maxTimelineHeight =
+        (document.querySelectorAll(".my-container").length - 1) * 100;
+    
+      window.addEventListener("scroll", () => {
+        const scrollPercentage = (window.scrollY / maxTimelineHeight) * 65; //Adjust the speed as needed
+    
+        const adjustedPercentage = Math.min(100, scrollPercentage);
+        timelineLine.style.height = `${adjustedPercentage}%`;
+        timelineImage.style.top = `${adjustedPercentage}%`;
+      });
+    });
+    
+  </script>
   <script type="text/javascript">
     (function(){
         emailjs.init("xHDaki_26uPG6VRdS");
